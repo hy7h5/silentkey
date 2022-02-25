@@ -1,5 +1,5 @@
 # silentkey
-This Tool Customize Keys and easy to move or run different script in Termux
+This Tool Customize Keys and easy to move or run different script in Termux easily.
 
 apt update && upgrade
 
@@ -37,4 +37,4 @@ reset your keys type 1
 To know Tools Details select 3
 
 
-
+Take Love From Silent Killer 🥰❤️. Keep with me.
