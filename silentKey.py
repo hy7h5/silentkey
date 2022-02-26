@@ -141,6 +141,3 @@ class Terkey:
 if __name__=='__main__':
   terkey = Terkey()
   terkey.start()
-# ini cuma shortcut buat bantu para nub
-# Hansaplast
- 
