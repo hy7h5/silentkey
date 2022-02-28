@@ -1,4 +1,5 @@
 import os
+import sys
 from time import sleep
 from threading import Thread as td
  
@@ -6,12 +7,68 @@ from threading import Thread as td
 a ='\033[92m'
 b ='\033[91m'
 c ='\033[0m'
- 
+blue= '\33[94m'
+lightblue = '\033[94m'
+red = '\033[91m'
+white = '\33[97m'
+yellow = '\33[93m'
+green = '\033[1;32m'
+cyan  = "\033[96m"
+end = '\033[0m'
+logo=yellow+str("""
+⠀
+          _____                    _____          
+         /\    \                  /\    \         
+        /::\    \                /::\____\        
+       /::::\    \              /:::/    /        
+      /::::::\    \            /:::/    /         
+     /:::/\:::\    \          /:::/    /          
+    /:::/__\:::\    \        /:::/____/           
+    \:::\   \:::\    \      /::::\    \           
+  ___\:::\   \:::\    \    /::::::\____\________  
+ /\   \:::\   \:::\    \  /:::/\:::::::::::\    \ 
+/::\   \:::\   \:::\____\/:::/  |:::::::::::\____\
+\:::\   \:::\   \::/    /\::/   |::|~~~|~~~~~     
+ \:::\   \:::\   \/____/  \/____|::|   |          
+  \:::\   \:::\    \            |::|   |          
+   \:::\   \:::\____\           |::|   |          
+    \:::\  /:::/    /           |::|   |          
+     \:::\/:::/    /            |::|   |          
+      \::::::/    /             |::|   |          
+       \::::/    /              \::|   |          
+        \::/    /                \:|   |          
+         \/____/                  \|___|          
+                                                  
+                                           
+""")
+logo2=red+str("""
++-+-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+
+ |W|e|l|c|o|m|e| |T|o| |S|i|l|e|n|t| |K|i|l|l|e|r|
+ +-+-+-+-+-+-+-+ +-+-+ +-+-+-+-+-+-+ +-+-+-+-+-+-+
+ """)
+print(logo)
+
+username="Silent"
+password="Antick"
+
+#input username & password
+
+inu=str(input("Enter Your Username:"))
+inp=str(input("Enter Your Password:"))
+
+if username==inu and password==inp:
+	print("Your User and Pass correct ")
+	pass
+else:
+	print("Your User and Pass invaild")
+	sys.exit()
+
 class Terkey:
   def __init__(self):
     pass
  
   # Banner
+  print(logo2)
   def banner(self):
       os.system('clear')
       print(f'{c}Silent Killer{a}[{c}Termux Key{a}]'.center(68))
@@ -21,7 +78,8 @@ class Terkey:
   # Loading animation
   def animate(self,params):
     self.banner()
-    print(f"{c}Setting up your keyb..")
+    print(logo2)
+    print(f"{c}Setting up your key..")
     t = td(target=self.setup,args=(params,))
     t.start()
     while t.is_alive():
@@ -141,3 +199,6 @@ class Terkey:
 if __name__=='__main__':
   terkey = Terkey()
   terkey.start()
+# ini cuma shortcut buat bantu para nub
+# Hansaplast
+ 
